@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Collège Mampeza</title>
+
+    <meta
+        name="description"
+        content="Contactez le Collège Mampeza à Kalamu, Kinshasa."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Styles spécifiques à la page Contact -->
+    <style>
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 18px;
+        }
+
+        .contact-info h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.6;
+        }
+
+        .contact-form-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form-box h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form-box > p {
+            color: var(--muted);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--text);
+            font: inherit;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .contact-form .btn {
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .contact-note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .map-box {
+            margin-top: 50px;
+            min-height: 280px;
+            border-radius: 18px;
+            background:
+                linear-gradient(
+                    rgba(10, 61, 98, 0.88),
+                    rgba(10, 61, 98, 0.88)
+                ),
+                url("images/ecole-02.jpg") center / cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .map-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .map-content p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 850px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .contact-info,
+            .contact-form-box {
+                padding: 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .contact-info h2,
+            .contact-form-box h2 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/logo-mampeza.png"
+                    alt="Logo Collège Mampeza"
+                >
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Ouvrir le menu"
+            >
+                ☰
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="enseignement.html">
+                        Enseignement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admissions.html">
+                        Admissions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="actualites.html">
+                        Actualités
+                    </a>
+                </li>
+
+                <li>
+                    <a href="galerie.html">
+                        Galerie
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <span class="hero-label">
+                CONTACT
+            </span>
+
+            <h1>
+                Parlons du Collège Mampeza
+            </h1>
+
+            <p>
+                Une question concernant les inscriptions,
+                l'enseignement ou la vie scolaire ?
+                Contactez-nous.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+
+                <!-- ================= INFORMATIONS ================= -->
+                <div class="contact-info">
+
+                    <h2>
+                        Nos coordonnées
+                    </h2>
+
+                    <p>
+                        Pour toute demande d'information,
+                        l'administration du Collège Mampeza
+                        reste à votre disposition.
+                    </p>
+
+
+                    <!-- Adresse -->
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Adresse
+                            </h3>
+
+                            <p>
+                                14ᵉ rue Kimbangu 1<br>
+                                Commune de Kalamu<br>
+                                Kinshasa, RDC
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Téléphone -->
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Téléphone
+                            </h3>
+
+                            <p>
+                                +243 892 793 805
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Référence -->
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Référence
+                            </h3>
+
+                            <p>
+                                Collège Mampeza
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Disponibilité -->
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Accueil
+                            </h3>
+
+                            <p>
+                                Pour les horaires d'accueil,
+                                veuillez vous renseigner auprès
+                                de l'établissement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= FORMULAIRE ================= -->
+                <div class="contact-form-box">
+
+                    <h2>
+                        Envoyer un message
+                    </h2>
+
+                    <p>
+                        Remplissez le formulaire ci-dessous pour
+                        envoyer votre demande.
+                    </p>
+
+
+                    <form
+                        class="contact-form"
+                        id="contactForm"
+                    >
+
+
+                        <!-- Nom -->
+                        <div class="form-group">
+
+                            <label for="nom">
+                                Nom complet
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nom"
+                                name="nom"
+                                placeholder="Votre nom complet"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Téléphone -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="telephone">
+                                    Téléphone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telephone"
+                                    name="telephone"
+                                    placeholder="Votre numéro"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Votre adresse email"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Sujet -->
+                        <div class="form-group">
+
+                            <label for="sujet">
+                                Sujet
+                            </label>
+
+                            <select
+                                id="sujet"
+                                name="sujet"
+                                required
+                            >
+
+                                <option value="">
+                                    Choisissez un sujet
+                                </option>
+
+                                <option value="inscription">
+                                    Inscription
+                                </option>
+
+                                <option value="enseignement">
+                                    Enseignement
+                                </option>
+
+                                <option value="information">
+                                    Demande d'information
+                                </option>
+
+                                <option value="autre">
+                                    Autre demande
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Message -->
+                        <div class="form-group">
+
+                            <label for="message">
+                                Votre message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Écrivez votre message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Bouton -->
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Envoyer le message
+                        </button>
+
+
+                        <p class="contact-note">
+                            Les informations envoyées via ce formulaire
+                            doivent être traitées par l'administration
+                            de l'établissement.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LOCALISATION ================= -->
+            <div class="map-box">
+
+                <div class="map-content">
+
+                    <h2>
+                        Où nous trouver ?
+                    </h2>
+
+                    <p>
+                        Collège Mampeza<br>
+                        14ᵉ rue Kimbangu 1, Commune de Kalamu,
+                        Kinshasa
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Collège+Mampeza+Kinshasa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline"
+                    >
+                        Voir la localisation
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="about-cta">
+
+        <div class="container">
+
+            <div>
+
+                <span>
+                    COLLÈGE MAMPEZA
+                </span>
+
+                <h2>
+                    Une information ? Nous sommes à votre écoute.
+                </h2>
+
+                <p>
+                    Consultez également les informations sur
+                    l'enseignement et les admissions.
+                </p>
+
+            </div>
+
+
+            <div class="cta-buttons">
+
+                <a
+                    href="admissions.html"
+                    class="btn btn-primary"
+                >
+                    Admissions
+                </a>
+
+                <a
+                    href="enseignement.html"
+                    class="btn btn-outline"
+                >
+                    Enseignement
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- A PROPOS -->
+                <div class="footer-about">
+
+                    <img
+                        src="images/logo-mampeza.png"
+                        alt="Logo Collège Mampeza"
+                    >
+
+                    <p>
+                        Collège Mampeza : un cadre d'apprentissage
+                        destiné à accompagner les élèves dans leur
+                        parcours scolaire.
+                    </p>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+                <div>
+
+                    <h3>
+                        Navigation
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Accueil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                À propos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="enseignement.html">
+                                Enseignement
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="admissions.html">
+                                Admissions
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div>
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                         14ᵉ rue Kimbangu 1
+                    </p>
+
+                    <p>
+                         Commune de Kalamu, Kinshasa
+                    </p>
+
+                    <p>
+                         +243 892 793 805
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Collège Mampeza. Tous droits réservés.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
